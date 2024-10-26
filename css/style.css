@@ -1,3 +1,4 @@
+/* Animation for logo growth and fade-in effect */
 @keyframes growFadeIn {
     from {
       width: 25px;
@@ -9,50 +10,55 @@
     }
 }
 
+/* Logo animation */
 #logo {
     animation: growFadeIn 5s;
 }
-  
 
-
+/* Base styling */
 body {
     font-family: Poppins, serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
 
+/* Header styling for layout */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Navigation links layout */
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
+/* Link styling */
 a:link, a:visited {
     color: blue;
     text-decoration: underline;
- }
+}
 
+/* Card header styling */
 .card > header {
     background-color: #288088;
     border: 2px solid #45ADAD;
     padding: 20px 0;
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px 50px 0 0;
 }
 
+/* Card layout */
 .card {
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px 50px 0 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     flex: 0 1 450px;
 }
 
-
+/* Pricing section layout */
 .pricing {
     display: flex;
     justify-content: space-around;
@@ -60,39 +66,34 @@ a:link, a:visited {
     padding: 20px;
 }
 
+/* Gallery layout */
 .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
+}
+
+/* Gallery image styling */
 .gallery img {
     border: solid 10px #50C7C7;
     margin: 10px;
     width: 300px;
-  }
+}
 
-
-
-
-
-
-
-
+/* Styles for larger screens */
 @media (min-width: 900px) {
 
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
     }
+
     .nav_links {
         flex-direction: row;
         justify-content: flex-end;
     }
-
 
     .pricing {
         display: flex;
@@ -117,13 +118,14 @@ a:link, a:visited {
     }
 }
 
+/* Reduce motion for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
     #logo {
       animation: none;
     }
-  }
+}
 
-
+/* Print styles for portrait orientation */
 @media print and (orientation: portrait) {
 
     body {
@@ -149,6 +151,7 @@ a:link, a:visited {
         flex-direction: row;
         justify-content: center;
     }
+
     .card {
         border: solid 2px #45ADDD;
         flex: 0 1 325px;
